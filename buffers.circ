@@ -163,10 +163,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(330,300)" to="(330,360)"/>
     <wire from="(200,450)" to="(330,450)"/>
     <wire from="(330,360)" to="(330,450)"/>
-    <comp lib="4" loc="(370,350)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
     <comp lib="0" loc="(390,350)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -174,18 +170,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="Instruction_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(370,290)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="6" loc="(427,500)" name="Text">
-      <a name="text" val="This is meant to be a enable, but since we dont have a hazard detection unit it will always enabled for the time being"/>
-    </comp>
-    <comp lib="0" loc="(310,350)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Instruction_in"/>
-    </comp>
-    <comp lib="0" loc="(200,450)" name="Constant"/>
     <comp lib="0" loc="(210,400)" name="Pin">
       <a name="label" val="CLK"/>
     </comp>
@@ -200,6 +184,22 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="16"/>
       <a name="label" val="PC+1_in"/>
     </comp>
+    <comp lib="4" loc="(370,290)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(370,350)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="6" loc="(427,500)" name="Text">
+      <a name="text" val="This is meant to be a enable, but since we dont have a hazard detection unit it will always enabled for the time being"/>
+    </comp>
+    <comp lib="0" loc="(310,350)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Instruction_in"/>
+    </comp>
+    <comp lib="0" loc="(200,450)" name="Constant"/>
   </circuit>
   <circuit name="ID/EX">
     <a name="circuit" val="ID/EX"/>
@@ -208,7 +208,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <path d="M61,6 Q65,16 69,6" fill="none" stroke="#808080" stroke-width="2"/>
-      <rect fill="#90e5ff" height="828" stroke="#000000" stroke-width="2" width="72" x="50" y="2"/>
+      <rect fill="#90e5ff" height="1016" stroke="#000000" stroke-width="2" width="70" x="50" y="2"/>
       <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="85" y="483">ID/EX</text>
       <circ-port height="8" pin="260,30" width="8" x="46" y="36"/>
       <circ-port height="8" pin="260,90" width="8" x="46" y="96"/>
@@ -230,7 +230,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="260,1330" width="8" x="46" y="716"/>
       <circ-port height="8" pin="260,1400" width="8" x="46" y="746"/>
       <circ-port height="8" pin="260,1460" width="8" x="46" y="786"/>
-      <circ-port height="8" pin="150,1540" width="8" x="76" y="826"/>
+      <circ-port height="8" pin="140,1700" width="8" x="76" y="1016"/>
       <circ-port height="10" pin="430,30" width="10" x="115" y="35"/>
       <circ-port height="10" pin="430,90" width="10" x="115" y="95"/>
       <circ-port height="10" pin="430,220" width="10" x="115" y="175"/>
@@ -255,18 +255,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="430,160" width="10" x="115" y="165"/>
       <circ-port height="10" pin="430,840" width="10" x="115" y="265"/>
       <circ-port height="8" pin="200,840" width="8" x="46" y="266"/>
+      <circ-port height="8" pin="260,1520" width="8" x="46" y="916"/>
+      <circ-port height="10" pin="430,1520" width="10" x="115" y="915"/>
+      <circ-port height="8" pin="260,1580" width="8" x="46" y="956"/>
+      <circ-port height="10" pin="430,1580" width="10" x="115" y="955"/>
       <circ-anchor facing="east" height="6" width="6" x="117" y="37"/>
     </appear>
     <wire from="(310,580)" to="(310,650)"/>
     <wire from="(310,1220)" to="(310,1290)"/>
+    <wire from="(350,110)" to="(350,120)"/>
     <wire from="(340,500)" to="(340,510)"/>
     <wire from="(340,180)" to="(340,190)"/>
-    <wire from="(350,110)" to="(350,120)"/>
     <wire from="(340,1140)" to="(340,1150)"/>
+    <wire from="(340,1540)" to="(340,1550)"/>
     <wire from="(340,1060)" to="(340,1070)"/>
     <wire from="(310,250)" to="(340,250)"/>
     <wire from="(310,650)" to="(340,650)"/>
     <wire from="(310,1290)" to="(340,1290)"/>
+    <wire from="(310,1610)" to="(340,1610)"/>
     <wire from="(320,40)" to="(330,40)"/>
     <wire from="(320,360)" to="(330,360)"/>
     <wire from="(320,760)" to="(330,760)"/>
@@ -275,7 +281,6 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,1190)" to="(430,1190)"/>
     <wire from="(200,620)" to="(330,620)"/>
     <wire from="(200,220)" to="(330,220)"/>
-    <wire from="(320,1470)" to="(320,1590)"/>
     <wire from="(260,1330)" to="(330,1330)"/>
     <wire from="(360,550)" to="(430,550)"/>
     <wire from="(310,310)" to="(310,380)"/>
@@ -283,6 +288,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(310,710)" to="(310,780)"/>
     <wire from="(320,1200)" to="(320,1270)"/>
     <wire from="(310,870)" to="(310,940)"/>
+    <wire from="(350,1600)" to="(350,1610)"/>
     <wire from="(350,640)" to="(350,650)"/>
     <wire from="(350,240)" to="(350,250)"/>
     <wire from="(340,1350)" to="(340,1360)"/>
@@ -295,6 +301,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,490)" to="(330,490)"/>
     <wire from="(320,1130)" to="(330,1130)"/>
     <wire from="(320,1050)" to="(330,1050)"/>
+    <wire from="(320,1530)" to="(330,1530)"/>
     <wire from="(320,1410)" to="(320,1470)"/>
     <wire from="(360,1400)" to="(430,1400)"/>
     <wire from="(200,750)" to="(330,750)"/>
@@ -308,17 +315,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(310,120)" to="(310,190)"/>
     <wire from="(320,690)" to="(320,760)"/>
     <wire from="(320,850)" to="(320,920)"/>
+    <wire from="(350,930)" to="(350,940)"/>
+    <wire from="(350,370)" to="(350,380)"/>
+    <wire from="(340,1480)" to="(340,1490)"/>
     <wire from="(350,770)" to="(350,780)"/>
     <wire from="(340,440)" to="(340,450)"/>
-    <wire from="(350,370)" to="(350,380)"/>
-    <wire from="(350,50)" to="(350,60)"/>
     <wire from="(340,1000)" to="(340,1010)"/>
-    <wire from="(350,930)" to="(350,940)"/>
-    <wire from="(340,1480)" to="(340,1490)"/>
+    <wire from="(350,50)" to="(350,60)"/>
     <wire from="(310,510)" to="(340,510)"/>
     <wire from="(310,190)" to="(340,190)"/>
     <wire from="(310,1150)" to="(340,1150)"/>
     <wire from="(310,1070)" to="(340,1070)"/>
+    <wire from="(310,1550)" to="(340,1550)"/>
     <wire from="(320,1340)" to="(330,1340)"/>
     <wire from="(310,250)" to="(310,310)"/>
     <wire from="(310,650)" to="(310,710)"/>
@@ -329,12 +337,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,90)" to="(430,90)"/>
     <wire from="(320,100)" to="(320,170)"/>
     <wire from="(310,1290)" to="(310,1360)"/>
+    <wire from="(350,1540)" to="(350,1550)"/>
     <wire from="(350,500)" to="(350,510)"/>
+    <wire from="(340,1210)" to="(340,1220)"/>
     <wire from="(340,570)" to="(340,580)"/>
     <wire from="(350,180)" to="(350,190)"/>
     <wire from="(350,1140)" to="(350,1150)"/>
     <wire from="(350,1060)" to="(350,1070)"/>
-    <wire from="(340,1210)" to="(340,1220)"/>
+    <wire from="(310,1610)" to="(310,1700)"/>
     <wire from="(310,1360)" to="(340,1360)"/>
     <wire from="(320,430)" to="(330,430)"/>
     <wire from="(320,990)" to="(330,990)"/>
@@ -343,20 +353,19 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(310,60)" to="(310,120)"/>
     <wire from="(320,630)" to="(320,690)"/>
     <wire from="(360,1260)" to="(430,1260)"/>
+    <wire from="(360,1580)" to="(430,1580)"/>
     <wire from="(260,1400)" to="(330,1400)"/>
     <wire from="(360,620)" to="(430,620)"/>
     <wire from="(360,220)" to="(430,220)"/>
     <wire from="(310,380)" to="(310,450)"/>
     <wire from="(320,1270)" to="(320,1340)"/>
     <wire from="(310,940)" to="(310,1010)"/>
-    <wire from="(140,1590)" to="(320,1590)"/>
     <wire from="(340,700)" to="(340,710)"/>
-    <wire from="(340,300)" to="(340,310)"/>
-    <wire from="(340,1420)" to="(340,1430)"/>
     <wire from="(350,1350)" to="(350,1360)"/>
+    <wire from="(340,1420)" to="(340,1430)"/>
     <wire from="(340,860)" to="(340,870)"/>
+    <wire from="(340,300)" to="(340,310)"/>
     <wire from="(310,780)" to="(310,870)"/>
-    <wire from="(150,1540)" to="(310,1540)"/>
     <wire from="(310,450)" to="(340,450)"/>
     <wire from="(310,1010)" to="(340,1010)"/>
     <wire from="(310,1490)" to="(340,1490)"/>
@@ -364,6 +373,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,1200)" to="(330,1200)"/>
     <wire from="(310,190)" to="(310,250)"/>
     <wire from="(320,40)" to="(320,100)"/>
+    <wire from="(310,1550)" to="(310,1610)"/>
     <wire from="(200,420)" to="(330,420)"/>
     <wire from="(200,980)" to="(330,980)"/>
     <wire from="(260,90)" to="(330,90)"/>
@@ -381,6 +391,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(350,1000)" to="(350,1010)"/>
     <wire from="(310,1070)" to="(310,1150)"/>
     <wire from="(320,760)" to="(320,850)"/>
+    <wire from="(320,1590)" to="(320,1750)"/>
     <wire from="(310,580)" to="(340,580)"/>
     <wire from="(310,1220)" to="(340,1220)"/>
     <wire from="(320,290)" to="(330,290)"/>
@@ -388,54 +399,171 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,1410)" to="(330,1410)"/>
     <wire from="(320,850)" to="(330,850)"/>
     <wire from="(320,170)" to="(320,230)"/>
+    <wire from="(320,1530)" to="(320,1590)"/>
     <wire from="(360,1120)" to="(430,1120)"/>
+    <wire from="(360,1520)" to="(430,1520)"/>
     <wire from="(200,550)" to="(330,550)"/>
     <wire from="(260,1260)" to="(330,1260)"/>
+    <wire from="(260,1580)" to="(330,1580)"/>
     <wire from="(360,480)" to="(430,480)"/>
     <wire from="(360,160)" to="(430,160)"/>
     <wire from="(360,1040)" to="(430,1040)"/>
+    <wire from="(130,1750)" to="(320,1750)"/>
     <wire from="(320,490)" to="(320,560)"/>
     <wire from="(320,1130)" to="(320,1200)"/>
     <wire from="(310,1360)" to="(310,1430)"/>
+    <wire from="(350,1210)" to="(350,1220)"/>
+    <wire from="(340,1600)" to="(340,1610)"/>
+    <wire from="(340,1280)" to="(340,1290)"/>
+    <wire from="(340,640)" to="(340,650)"/>
     <wire from="(350,570)" to="(350,580)"/>
     <wire from="(340,240)" to="(340,250)"/>
-    <wire from="(340,640)" to="(340,650)"/>
-    <wire from="(340,1280)" to="(340,1290)"/>
-    <wire from="(350,1210)" to="(350,1220)"/>
     <wire from="(320,1050)" to="(320,1130)"/>
+    <wire from="(140,1700)" to="(310,1700)"/>
     <wire from="(310,310)" to="(340,310)"/>
     <wire from="(310,710)" to="(340,710)"/>
     <wire from="(310,1430)" to="(340,1430)"/>
     <wire from="(310,870)" to="(340,870)"/>
     <wire from="(320,100)" to="(330,100)"/>
-    <wire from="(310,1490)" to="(310,1540)"/>
     <wire from="(310,450)" to="(310,510)"/>
     <wire from="(260,30)" to="(330,30)"/>
     <wire from="(310,1010)" to="(310,1070)"/>
+    <wire from="(310,1490)" to="(310,1550)"/>
     <wire from="(360,1330)" to="(430,1330)"/>
     <wire from="(200,680)" to="(330,680)"/>
     <wire from="(200,280)" to="(330,280)"/>
     <wire from="(200,840)" to="(330,840)"/>
     <wire from="(320,1340)" to="(320,1410)"/>
+    <wire from="(340,930)" to="(340,940)"/>
+    <wire from="(350,860)" to="(350,870)"/>
+    <wire from="(350,1420)" to="(350,1430)"/>
     <wire from="(340,370)" to="(340,380)"/>
+    <wire from="(340,50)" to="(340,60)"/>
     <wire from="(350,700)" to="(350,710)"/>
     <wire from="(340,770)" to="(340,780)"/>
     <wire from="(350,300)" to="(350,310)"/>
-    <wire from="(340,50)" to="(340,60)"/>
-    <wire from="(340,930)" to="(340,940)"/>
-    <wire from="(350,1420)" to="(350,1430)"/>
-    <wire from="(350,860)" to="(350,870)"/>
     <wire from="(310,120)" to="(340,120)"/>
     <wire from="(320,230)" to="(330,230)"/>
     <wire from="(320,630)" to="(330,630)"/>
     <wire from="(320,1270)" to="(330,1270)"/>
+    <wire from="(320,1590)" to="(330,1590)"/>
     <wire from="(320,430)" to="(320,490)"/>
     <wire from="(320,990)" to="(320,1050)"/>
+    <wire from="(320,1470)" to="(320,1530)"/>
     <wire from="(360,1460)" to="(430,1460)"/>
     <wire from="(260,1120)" to="(330,1120)"/>
+    <wire from="(260,1520)" to="(330,1520)"/>
     <wire from="(360,420)" to="(430,420)"/>
     <wire from="(360,980)" to="(430,980)"/>
     <comp lib="4" loc="(360,480)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,160)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="reg_WR"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,980)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="HALF_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,910)" name="Pin">
+      <a name="label" val="LH_LB"/>
+    </comp>
+    <comp lib="4" loc="(360,220)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(200,420)" name="Pin">
+      <a name="label" val="ALU_EN"/>
+    </comp>
+    <comp lib="0" loc="(430,1520)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="bits3-5_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,1580)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="bits6-8_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MemToReg_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,1040)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="SIN_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(360,90)" name="Register">
+      <a name="width" val="12"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,480)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="ALU_src_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(360,280)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,1330)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(130,1750)" name="Constant"/>
+    <comp lib="0" loc="(430,840)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="reg_dest_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,160)" name="Pin">
+      <a name="label" val="reg_WR"/>
+    </comp>
+    <comp lib="4" loc="(360,980)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(260,1120)" name="Pin">
+      <a name="width" val="12"/>
+      <a name="label" val="imm12"/>
+    </comp>
+    <comp lib="0" loc="(140,1700)" name="Pin">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(200,620)" name="Pin">
+      <a name="label" val="JUMP"/>
+    </comp>
+    <comp lib="4" loc="(360,840)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,680)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="BEQ_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,1400)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="label" val="opcode_in"/>
+    </comp>
+    <comp lib="4" loc="(360,1040)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
@@ -445,13 +573,33 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="JUMP_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(360,910)" name="Register">
-      <a name="width" val="1"/>
+    <comp lib="4" loc="(360,1400)" name="Register">
+      <a name="width" val="4"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(360,840)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
+    <comp lib="0" loc="(260,1190)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="input1_in"/>
+    </comp>
+    <comp lib="0" loc="(430,1260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="input2_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,1330)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="imm6ext16_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,220)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="mem_RD_out"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(430,90)" name="Pin">
       <a name="facing" val="west"/>
@@ -460,16 +608,14 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="imm12_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(140,1590)" name="Constant"/>
-    <comp lib="0" loc="(260,1330)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="imm6ext16_in"/>
+    <comp lib="0" loc="(200,680)" name="Pin">
+      <a name="label" val="BEQ"/>
     </comp>
-    <comp lib="4" loc="(360,680)" name="Register">
-      <a name="width" val="1"/>
+    <comp lib="4" loc="(360,1120)" name="Register">
+      <a name="width" val="12"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(360,160)" name="Register">
+    <comp lib="4" loc="(360,620)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
@@ -479,93 +625,18 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="LUI_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,1260)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
+    <comp lib="0" loc="(200,840)" name="Pin">
+      <a name="label" val="reg_dest"/>
+    </comp>
+    <comp lib="0" loc="(200,550)" name="Pin">
+      <a name="label" val="LUI"/>
+    </comp>
+    <comp lib="0" loc="(260,1330)" name="Pin">
       <a name="width" val="16"/>
-      <a name="label" val="input2_out"/>
-      <a name="labelloc" val="east"/>
+      <a name="label" val="imm6ext16_in"/>
     </comp>
-    <comp lib="0" loc="(430,750)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="BNEQ_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,680)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="BEQ_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(260,30)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Target_address"/>
-    </comp>
-    <comp lib="4" loc="(360,280)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,480)" name="Pin">
-      <a name="label" val="ALU_src"/>
-    </comp>
-    <comp lib="0" loc="(150,1540)" name="Pin">
-      <a name="label" val="CLK"/>
-    </comp>
-    <comp lib="4" loc="(360,420)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,1040)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="SIN_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,980)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,420)" name="Pin">
-      <a name="label" val="ALU_EN"/>
-    </comp>
-    <comp lib="0" loc="(200,1040)" name="Pin">
-      <a name="label" val="sin"/>
-    </comp>
-    <comp lib="0" loc="(430,910)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="LH_LB_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,160)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="reg_WR"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(260,1460)" name="Pin">
-      <a name="width" val="3"/>
-      <a name="label" val="func_in"/>
-    </comp>
-    <comp lib="0" loc="(430,980)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="HALF_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(260,1120)" name="Pin">
-      <a name="width" val="12"/>
-      <a name="label" val="imm12"/>
-    </comp>
-    <comp lib="0" loc="(430,280)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="mem_WR_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(200,750)" name="Pin">
-      <a name="label" val="BNEQ"/>
+    <comp lib="0" loc="(200,220)" name="Pin">
+      <a name="label" val="mem_RD"/>
     </comp>
     <comp lib="0" loc="(430,1120)" name="Pin">
       <a name="facing" val="west"/>
@@ -574,130 +645,26 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="imm12_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,1400)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="label" val="opcode_in"/>
-      <a name="labelloc" val="east"/>
+    <comp lib="0" loc="(200,980)" name="Pin">
+      <a name="label" val="half"/>
     </comp>
     <comp lib="4" loc="(360,550)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(200,160)" name="Pin">
-      <a name="label" val="reg_WR"/>
-    </comp>
-    <comp lib="0" loc="(430,840)" name="Pin">
+    <comp lib="0" loc="(430,910)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="reg_dest_out"/>
+      <a name="label" val="LH_LB_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,1190)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="input1_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(200,910)" name="Pin">
-      <a name="label" val="LH_LB"/>
-    </comp>
-    <comp lib="0" loc="(200,550)" name="Pin">
-      <a name="label" val="LUI"/>
-    </comp>
-    <comp lib="0" loc="(430,30)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="PC+1_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,420)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="ALU_EN_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(260,1190)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="input1_in"/>
-    </comp>
-    <comp lib="0" loc="(200,680)" name="Pin">
-      <a name="label" val="BEQ"/>
-    </comp>
-    <comp lib="0" loc="(430,350)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="MemToReg_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,1040)" name="Register">
-      <a name="width" val="1"/>
+    <comp lib="4" loc="(360,1520)" name="Register">
+      <a name="width" val="3"/>
       <a name="trigger" val="falling"/>
     </comp>
     <comp lib="4" loc="(360,1190)" name="Register">
       <a name="width" val="16"/>
       <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,280)" name="Pin">
-      <a name="label" val="mem_WR"/>
-    </comp>
-    <comp lib="0" loc="(200,350)" name="Pin">
-      <a name="label" val="MemToReg"/>
-    </comp>
-    <comp lib="0" loc="(260,1260)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="input2_in"/>
-    </comp>
-    <comp lib="0" loc="(200,220)" name="Pin">
-      <a name="label" val="mem_RD"/>
-    </comp>
-    <comp lib="0" loc="(200,620)" name="Pin">
-      <a name="label" val="JUMP"/>
-    </comp>
-    <comp lib="4" loc="(360,220)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,480)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="ALU_src_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,30)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,90)" name="Register">
-      <a name="width" val="12"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,1330)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="imm6ext16_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,1400)" name="Register">
-      <a name="width" val="4"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,750)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,980)" name="Pin">
-      <a name="label" val="half"/>
-    </comp>
-    <comp lib="0" loc="(430,220)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="mem_RD_out"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(430,1460)" name="Pin">
       <a name="facing" val="west"/>
@@ -706,40 +673,123 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="func_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(360,1120)" name="Register">
-      <a name="width" val="12"/>
+    <comp lib="4" loc="(360,30)" name="Register">
+      <a name="width" val="16"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(200,840)" name="Pin">
-      <a name="label" val="reg_dest"/>
+    <comp lib="0" loc="(430,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="mem_WR_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,1460)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="func_in"/>
+    </comp>
+    <comp lib="0" loc="(200,280)" name="Pin">
+      <a name="label" val="mem_WR"/>
     </comp>
     <comp lib="4" loc="(360,350)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(360,620)" name="Register">
+    <comp lib="4" loc="(360,750)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(260,1520)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="bits3-5"/>
+    </comp>
+    <comp lib="0" loc="(430,750)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="BNEQ_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(360,910)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(200,350)" name="Pin">
+      <a name="label" val="MemToReg"/>
+    </comp>
+    <comp lib="4" loc="(360,160)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(200,480)" name="Pin">
+      <a name="label" val="ALU_src"/>
+    </comp>
+    <comp lib="0" loc="(430,1190)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="input1_out"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(360,1460)" name="Register">
       <a name="width" val="3"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="4" loc="(360,1260)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,1330)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
+    <comp lib="0" loc="(430,1400)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="opcode_in"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(260,90)" name="Pin">
       <a name="width" val="12"/>
       <a name="label" val="imm12"/>
     </comp>
-    <comp lib="0" loc="(260,1400)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="label" val="opcode_in"/>
+    <comp lib="0" loc="(260,30)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Target_address"/>
+    </comp>
+    <comp lib="0" loc="(430,420)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="ALU_EN_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(360,420)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(260,1580)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="bits6-8"/>
+    </comp>
+    <comp lib="0" loc="(200,750)" name="Pin">
+      <a name="label" val="BNEQ"/>
+    </comp>
+    <comp lib="0" loc="(260,1260)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="input2_in"/>
+    </comp>
+    <comp lib="4" loc="(360,1260)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(200,1040)" name="Pin">
+      <a name="label" val="sin"/>
+    </comp>
+    <comp lib="0" loc="(430,30)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PC+1_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(360,1580)" name="Register">
+      <a name="width" val="3"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,680)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
     </comp>
   </circuit>
   <circuit name="EX/MEM">
@@ -748,7 +798,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
-      <rect fill="#90e5ff" height="829" stroke="#000000" stroke-width="2" width="69" x="180" y="11"/>
+      <rect fill="#90e5ff" height="990" stroke="#000000" stroke-width="2" width="71" x="180" y="11"/>
       <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="212" y="492">EX/MEM</text>
       <circ-port height="8" pin="260,30" width="8" x="176" y="56"/>
       <circ-port height="8" pin="260,90" width="8" x="176" y="106"/>
@@ -765,7 +815,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="8" pin="260,880" width="8" x="176" y="406"/>
       <circ-port height="8" pin="260,950" width="8" x="176" y="546"/>
       <circ-port height="8" pin="260,1100" width="8" x="176" y="706"/>
-      <circ-port height="8" pin="150,1150" width="8" x="206" y="826"/>
+      <circ-port height="8" pin="150,1230" width="8" x="206" y="996"/>
       <circ-port height="10" pin="430,30" width="10" x="245" y="55"/>
       <circ-port height="10" pin="430,90" width="10" x="245" y="105"/>
       <circ-port height="10" pin="430,210" width="10" x="245" y="175"/>
@@ -785,6 +835,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="430,1020" width="10" x="245" y="575"/>
       <circ-port height="8" pin="200,150" width="8" x="176" y="166"/>
       <circ-port height="10" pin="430,150" width="10" x="245" y="165"/>
+      <circ-port height="10" pin="430,1150" width="10" x="245" y="945"/>
+      <circ-port height="8" pin="220,1150" width="8" x="176" y="946"/>
       <circ-anchor facing="east" height="6" width="6" x="247" y="57"/>
     </appear>
     <wire from="(310,300)" to="(310,370)"/>
@@ -793,9 +845,9 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,550)" to="(320,620)"/>
     <wire from="(310,700)" to="(310,770)"/>
     <wire from="(320,1030)" to="(320,1100)"/>
+    <wire from="(340,820)" to="(340,830)"/>
     <wire from="(350,110)" to="(350,120)"/>
     <wire from="(340,900)" to="(340,910)"/>
-    <wire from="(340,820)" to="(340,830)"/>
     <wire from="(350,630)" to="(350,640)"/>
     <wire from="(340,500)" to="(340,510)"/>
     <wire from="(350,230)" to="(350,240)"/>
@@ -810,9 +862,11 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,160)" to="(330,160)"/>
     <wire from="(320,680)" to="(330,680)"/>
     <wire from="(320,960)" to="(330,960)"/>
+    <wire from="(320,1160)" to="(330,1160)"/>
     <wire from="(320,40)" to="(320,100)"/>
     <wire from="(310,510)" to="(310,570)"/>
     <wire from="(320,160)" to="(320,220)"/>
+    <wire from="(360,1150)" to="(430,1150)"/>
     <wire from="(200,540)" to="(330,540)"/>
     <wire from="(200,1020)" to="(330,1020)"/>
     <wire from="(200,340)" to="(330,340)"/>
@@ -828,24 +882,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,960)" to="(320,1030)"/>
     <wire from="(320,680)" to="(320,750)"/>
     <wire from="(310,910)" to="(310,980)"/>
-    <wire from="(140,1200)" to="(320,1200)"/>
-    <wire from="(340,630)" to="(340,640)"/>
+    <wire from="(140,1280)" to="(320,1280)"/>
+    <wire from="(340,230)" to="(340,240)"/>
     <wire from="(340,110)" to="(340,120)"/>
     <wire from="(350,560)" to="(350,570)"/>
-    <wire from="(340,230)" to="(340,240)"/>
-    <wire from="(340,1110)" to="(340,1120)"/>
-    <wire from="(350,1040)" to="(350,1050)"/>
     <wire from="(350,360)" to="(350,370)"/>
-    <wire from="(340,430)" to="(340,440)"/>
+    <wire from="(340,1110)" to="(340,1120)"/>
     <wire from="(350,760)" to="(350,770)"/>
+    <wire from="(350,1040)" to="(350,1050)"/>
+    <wire from="(340,630)" to="(340,640)"/>
+    <wire from="(340,430)" to="(340,440)"/>
     <wire from="(310,830)" to="(310,910)"/>
-    <wire from="(310,1120)" to="(310,1150)"/>
-    <wire from="(150,1150)" to="(310,1150)"/>
+    <wire from="(150,1230)" to="(310,1230)"/>
     <wire from="(310,60)" to="(340,60)"/>
     <wire from="(310,300)" to="(340,300)"/>
     <wire from="(310,180)" to="(340,180)"/>
     <wire from="(310,700)" to="(340,700)"/>
     <wire from="(310,980)" to="(340,980)"/>
+    <wire from="(310,1180)" to="(340,1180)"/>
     <wire from="(320,490)" to="(330,490)"/>
     <wire from="(320,890)" to="(330,890)"/>
     <wire from="(320,810)" to="(330,810)"/>
@@ -853,23 +907,27 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(310,120)" to="(310,180)"/>
     <wire from="(310,640)" to="(310,700)"/>
     <wire from="(320,490)" to="(320,550)"/>
+    <wire from="(310,1120)" to="(310,1180)"/>
     <wire from="(200,270)" to="(330,270)"/>
     <wire from="(200,670)" to="(330,670)"/>
     <wire from="(200,150)" to="(330,150)"/>
+    <wire from="(320,1160)" to="(320,1280)"/>
     <wire from="(360,480)" to="(430,480)"/>
     <wire from="(360,880)" to="(430,880)"/>
     <wire from="(360,800)" to="(430,800)"/>
     <wire from="(310,440)" to="(310,510)"/>
     <wire from="(320,890)" to="(320,960)"/>
-    <wire from="(340,760)" to="(340,770)"/>
-    <wire from="(350,50)" to="(350,60)"/>
-    <wire from="(340,1040)" to="(340,1050)"/>
-    <wire from="(350,970)" to="(350,980)"/>
     <wire from="(340,560)" to="(340,570)"/>
-    <wire from="(350,690)" to="(350,700)"/>
+    <wire from="(350,170)" to="(350,180)"/>
+    <wire from="(350,50)" to="(350,60)"/>
     <wire from="(340,360)" to="(340,370)"/>
     <wire from="(350,290)" to="(350,300)"/>
-    <wire from="(350,170)" to="(350,180)"/>
+    <wire from="(340,760)" to="(340,770)"/>
+    <wire from="(340,1040)" to="(340,1050)"/>
+    <wire from="(350,690)" to="(350,700)"/>
+    <wire from="(350,970)" to="(350,980)"/>
+    <wire from="(350,1170)" to="(350,1180)"/>
+    <wire from="(220,1150)" to="(330,1150)"/>
     <wire from="(320,810)" to="(320,890)"/>
     <wire from="(310,510)" to="(340,510)"/>
     <wire from="(310,910)" to="(340,910)"/>
@@ -884,6 +942,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(260,30)" to="(330,30)"/>
     <wire from="(320,620)" to="(320,680)"/>
     <wire from="(310,770)" to="(310,830)"/>
+    <wire from="(320,1100)" to="(320,1160)"/>
     <wire from="(360,1090)" to="(430,1090)"/>
     <wire from="(200,480)" to="(330,480)"/>
     <wire from="(200,800)" to="(330,800)"/>
@@ -896,15 +955,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(310,570)" to="(310,640)"/>
     <wire from="(320,420)" to="(320,490)"/>
     <wire from="(310,1050)" to="(310,1120)"/>
+    <wire from="(340,690)" to="(340,700)"/>
     <wire from="(350,500)" to="(350,510)"/>
     <wire from="(340,50)" to="(340,60)"/>
-    <wire from="(340,690)" to="(340,700)"/>
     <wire from="(340,290)" to="(340,300)"/>
     <wire from="(340,970)" to="(340,980)"/>
     <wire from="(350,900)" to="(350,910)"/>
     <wire from="(350,820)" to="(350,830)"/>
+    <wire from="(340,1170)" to="(340,1180)"/>
     <wire from="(340,170)" to="(340,180)"/>
-    <wire from="(320,1100)" to="(320,1200)"/>
     <wire from="(310,120)" to="(340,120)"/>
     <wire from="(310,240)" to="(340,240)"/>
     <wire from="(310,440)" to="(340,440)"/>
@@ -914,6 +973,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,350)" to="(330,350)"/>
     <wire from="(320,550)" to="(330,550)"/>
     <wire from="(320,1030)" to="(330,1030)"/>
+    <wire from="(310,1180)" to="(310,1230)"/>
     <wire from="(310,60)" to="(310,120)"/>
     <wire from="(310,180)" to="(310,240)"/>
     <wire from="(320,750)" to="(320,810)"/>
@@ -925,34 +985,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(360,340)" to="(430,340)"/>
     <wire from="(360,540)" to="(430,540)"/>
     <wire from="(360,1020)" to="(430,1020)"/>
-    <comp lib="0" loc="(430,270)" name="Pin">
+    <comp lib="6" loc="(256,1338)" name="Text">
+      <a name="text" val="regdesr should be here but we have it immediately written to write reg"/>
+    </comp>
+    <comp lib="0" loc="(260,30)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="Target_address"/>
+    </comp>
+    <comp lib="0" loc="(430,740)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="mem_WR_out"/>
+      <a name="label" val="HALF_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(360,150)" name="Register">
+    <comp lib="4" loc="(360,410)" name="Register">
       <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,90)" name="Register">
-      <a name="width" val="12"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,670)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,880)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,1090)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,30)" name="Register">
-      <a name="width" val="16"/>
       <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(430,800)" name="Pin">
@@ -961,77 +1008,101 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="SIN_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(360,1020)" name="Register">
-      <a name="width" val="1"/>
+    <comp lib="0" loc="(430,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MemToReg_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(150,1230)" name="Pin">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="4" loc="(360,30)" name="Register">
+      <a name="width" val="16"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(260,880)" name="Pin">
+    <comp lib="4" loc="(360,950)" name="Register">
       <a name="width" val="16"/>
-      <a name="label" val="lui_shifted"/>
-    </comp>
-    <comp lib="0" loc="(200,540)" name="Pin">
-      <a name="label" val="BEQ"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(200,740)" name="Pin">
       <a name="label" val="half"/>
     </comp>
-    <comp lib="0" loc="(140,1200)" name="Constant"/>
+    <comp lib="4" loc="(360,1150)" name="Register">
+      <a name="width" val="3"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,880)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="lui_shifted"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,950)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="res_in"/>
+    </comp>
+    <comp lib="4" loc="(360,610)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,150)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,270)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,950)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="res_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(260,90)" name="Pin">
+      <a name="width" val="12"/>
+      <a name="label" val="imm12"/>
+    </comp>
+    <comp lib="4" loc="(360,540)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
     <comp lib="0" loc="(430,210)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="mem_RD_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(200,340)" name="Pin">
-      <a name="label" val="MemToReg"/>
+    <comp lib="4" loc="(360,1020)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,670)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,670)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LH_LB_out"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(200,480)" name="Pin">
       <a name="label" val="JUMP"/>
-    </comp>
-    <comp lib="0" loc="(430,410)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="LUI_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,270)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="4" loc="(360,480)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,210)" name="Pin">
-      <a name="label" val="mem_RD"/>
-    </comp>
-    <comp lib="0" loc="(200,610)" name="Pin">
-      <a name="label" val="BNEQ"/>
-    </comp>
-    <comp lib="0" loc="(430,30)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="PC+1_out"/>
-      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(260,1100)" name="Pin">
       <a name="width" val="16"/>
       <a name="label" val="storeValue_in"/>
     </comp>
-    <comp lib="0" loc="(200,1020)" name="Pin">
-      <a name="label" val="zero"/>
-    </comp>
-    <comp lib="0" loc="(150,1150)" name="Pin">
-      <a name="label" val="CLK"/>
-    </comp>
-    <comp lib="4" loc="(360,410)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(260,90)" name="Pin">
-      <a name="width" val="12"/>
-      <a name="label" val="imm12"/>
+    <comp lib="0" loc="(430,1090)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="storeValue_out"/>
+      <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(430,480)" name="Pin">
       <a name="facing" val="west"/>
@@ -1043,42 +1114,53 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
+    <comp lib="0" loc="(200,410)" name="Pin">
+      <a name="label" val="LUI"/>
+    </comp>
+    <comp lib="4" loc="(360,880)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(200,270)" name="Pin">
+      <a name="label" val="mem_WR"/>
+    </comp>
+    <comp lib="0" loc="(140,1280)" name="Constant"/>
+    <comp lib="0" loc="(430,540)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="BEQ_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,540)" name="Pin">
+      <a name="label" val="BEQ"/>
+    </comp>
+    <comp lib="0" loc="(260,880)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="lui_shifted"/>
+    </comp>
+    <comp lib="0" loc="(200,610)" name="Pin">
+      <a name="label" val="BNEQ"/>
+    </comp>
+    <comp lib="0" loc="(200,340)" name="Pin">
+      <a name="label" val="MemToReg"/>
+    </comp>
+    <comp lib="0" loc="(200,210)" name="Pin">
+      <a name="label" val="mem_RD"/>
+    </comp>
+    <comp lib="0" loc="(430,30)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="16"/>
+      <a name="label" val="PC+1_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(430,610)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="label" val="BNEQ_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,1090)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="storeValue_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(200,410)" name="Pin">
-      <a name="label" val="LUI"/>
-    </comp>
-    <comp lib="0" loc="(200,150)" name="Pin">
-      <a name="label" val="reg_WR"/>
-    </comp>
     <comp lib="4" loc="(360,210)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,670)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="LH_LB_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="MemToReg_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,540)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
@@ -1088,11 +1170,37 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="reg_WR_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(200,800)" name="Pin">
-      <a name="label" val="sin"/>
+    <comp lib="0" loc="(430,1020)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="zero_out"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(360,740)" name="Register">
+    <comp lib="0" loc="(200,670)" name="Pin">
+      <a name="label" val="LH_LB"/>
+    </comp>
+    <comp lib="4" loc="(360,340)" name="Register">
       <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,270)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="mem_WR_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,150)" name="Pin">
+      <a name="label" val="reg_WR"/>
+    </comp>
+    <comp lib="0" loc="(200,1020)" name="Pin">
+      <a name="label" val="zero"/>
+    </comp>
+    <comp lib="0" loc="(220,1150)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="Wr_reg"/>
+    </comp>
+    <comp lib="4" loc="(360,1090)" name="Register">
+      <a name="width" val="16"/>
       <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(430,90)" name="Pin">
@@ -1102,65 +1210,32 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="imm12_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(260,30)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="Target_address"/>
-    </comp>
-    <comp lib="4" loc="(360,950)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,880)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="lui_shifted"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,340)" name="Register">
+    <comp lib="4" loc="(360,480)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(200,670)" name="Pin">
-      <a name="label" val="LH_LB"/>
-    </comp>
-    <comp lib="0" loc="(200,270)" name="Pin">
-      <a name="label" val="mem_WR"/>
-    </comp>
-    <comp lib="6" loc="(256,1258)" name="Text">
-      <a name="text" val="regdesr should be here but we have it immediately written to write reg"/>
-    </comp>
-    <comp lib="4" loc="(360,610)" name="Register">
+    <comp lib="4" loc="(360,740)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="0" loc="(430,740)" name="Pin">
+    <comp lib="0" loc="(430,1150)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="HALF_out"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Wr_reg_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,950)" name="Pin">
+    <comp lib="0" loc="(200,800)" name="Pin">
+      <a name="label" val="sin"/>
+    </comp>
+    <comp lib="4" loc="(360,90)" name="Register">
+      <a name="width" val="12"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,410)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="width" val="16"/>
-      <a name="label" val="res_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(430,1020)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="zero_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(260,950)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="res_in"/>
-    </comp>
-    <comp lib="0" loc="(430,540)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="BEQ_out"/>
+      <a name="label" val="LUI_out"/>
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
@@ -1170,15 +1245,15 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
-      <rect fill="#90e5ff" height="829" stroke="#000000" stroke-width="2" width="69" x="180" y="11"/>
+      <rect fill="#90e5ff" height="979" stroke="#000000" stroke-width="2" width="70" x="180" y="11"/>
       <text font-family="SansSerif" font-size="12" font-weight="bold" text-anchor="middle" x="212" y="492">MEM/WB</text>
       <circ-port height="8" pin="200,280" width="8" x="176" y="206"/>
       <circ-port height="8" pin="200,340" width="8" x="176" y="296"/>
       <circ-port height="8" pin="200,410" width="8" x="176" y="306"/>
       <circ-port height="8" pin="200,470" width="8" x="176" y="316"/>
       <circ-port height="8" pin="260,530" width="8" x="176" y="556"/>
-      <circ-port height="8" pin="200,600" width="8" x="176" y="576"/>
-      <circ-port height="8" pin="150,660" width="8" x="206" y="836"/>
+      <circ-port height="8" pin="260,600" width="8" x="176" y="576"/>
+      <circ-port height="8" pin="150,730" width="8" x="206" y="986"/>
       <circ-port height="10" pin="430,280" width="10" x="245" y="205"/>
       <circ-port height="10" pin="430,340" width="10" x="245" y="295"/>
       <circ-port height="10" pin="430,410" width="10" x="245" y="305"/>
@@ -1187,21 +1262,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <circ-port height="10" pin="430,600" width="10" x="245" y="575"/>
       <circ-port height="8" pin="200,220" width="8" x="176" y="176"/>
       <circ-port height="10" pin="430,220" width="10" x="245" y="175"/>
+      <circ-port height="10" pin="430,670" width="10" x="245" y="955"/>
+      <circ-port height="8" pin="210,670" width="8" x="176" y="956"/>
       <circ-anchor facing="east" height="6" width="6" x="247" y="207"/>
     </appear>
     <wire from="(310,560)" to="(310,630)"/>
     <wire from="(320,350)" to="(320,420)"/>
-    <wire from="(140,710)" to="(320,710)"/>
+    <wire from="(210,670)" to="(330,670)"/>
     <wire from="(340,620)" to="(340,630)"/>
     <wire from="(340,300)" to="(340,310)"/>
     <wire from="(350,430)" to="(350,440)"/>
     <wire from="(350,550)" to="(350,560)"/>
+    <wire from="(350,690)" to="(350,700)"/>
     <wire from="(350,490)" to="(350,500)"/>
     <wire from="(340,360)" to="(340,370)"/>
     <wire from="(340,240)" to="(340,250)"/>
-    <wire from="(310,630)" to="(310,660)"/>
-    <wire from="(320,610)" to="(320,710)"/>
-    <wire from="(150,660)" to="(310,660)"/>
     <wire from="(310,370)" to="(340,370)"/>
     <wire from="(310,310)" to="(340,310)"/>
     <wire from="(310,250)" to="(340,250)"/>
@@ -1209,30 +1284,38 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,480)" to="(330,480)"/>
     <wire from="(320,420)" to="(330,420)"/>
     <wire from="(320,540)" to="(330,540)"/>
+    <wire from="(320,680)" to="(330,680)"/>
     <wire from="(310,310)" to="(310,370)"/>
     <wire from="(310,250)" to="(310,310)"/>
     <wire from="(320,480)" to="(320,540)"/>
     <wire from="(320,420)" to="(320,480)"/>
     <wire from="(200,340)" to="(330,340)"/>
     <wire from="(200,280)" to="(330,280)"/>
-    <wire from="(200,600)" to="(330,600)"/>
     <wire from="(200,220)" to="(330,220)"/>
     <wire from="(260,530)" to="(330,530)"/>
     <wire from="(360,470)" to="(430,470)"/>
     <wire from="(360,410)" to="(430,410)"/>
     <wire from="(360,530)" to="(430,530)"/>
+    <wire from="(360,670)" to="(430,670)"/>
     <wire from="(310,370)" to="(310,440)"/>
     <wire from="(320,540)" to="(320,610)"/>
-    <wire from="(350,620)" to="(350,630)"/>
-    <wire from="(350,360)" to="(350,370)"/>
-    <wire from="(340,430)" to="(340,440)"/>
+    <wire from="(310,630)" to="(310,700)"/>
+    <wire from="(140,780)" to="(320,780)"/>
     <wire from="(340,550)" to="(340,560)"/>
-    <wire from="(340,490)" to="(340,500)"/>
+    <wire from="(340,430)" to="(340,440)"/>
     <wire from="(350,300)" to="(350,310)"/>
+    <wire from="(340,490)" to="(340,500)"/>
     <wire from="(350,240)" to="(350,250)"/>
+    <wire from="(350,620)" to="(350,630)"/>
+    <wire from="(340,690)" to="(340,700)"/>
+    <wire from="(350,360)" to="(350,370)"/>
+    <wire from="(310,700)" to="(310,730)"/>
+    <wire from="(320,680)" to="(320,780)"/>
+    <wire from="(150,730)" to="(310,730)"/>
     <wire from="(310,500)" to="(340,500)"/>
     <wire from="(310,440)" to="(340,440)"/>
     <wire from="(310,560)" to="(340,560)"/>
+    <wire from="(310,700)" to="(340,700)"/>
     <wire from="(320,290)" to="(330,290)"/>
     <wire from="(320,230)" to="(330,230)"/>
     <wire from="(320,610)" to="(330,610)"/>
@@ -1243,15 +1326,24 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(320,230)" to="(320,290)"/>
     <wire from="(200,470)" to="(330,470)"/>
     <wire from="(200,410)" to="(330,410)"/>
+    <wire from="(260,600)" to="(330,600)"/>
     <wire from="(360,280)" to="(430,280)"/>
     <wire from="(360,600)" to="(430,600)"/>
     <wire from="(360,340)" to="(430,340)"/>
     <wire from="(360,220)" to="(430,220)"/>
+    <comp lib="0" loc="(430,670)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="3"/>
+      <a name="label" val="Wr_reg_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
     <comp lib="0" loc="(200,340)" name="Pin">
       <a name="label" val="LH_LB"/>
     </comp>
-    <comp lib="0" loc="(200,220)" name="Pin">
-      <a name="label" val="reg_WR"/>
+    <comp lib="4" loc="(360,600)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
     </comp>
     <comp lib="0" loc="(430,530)" name="Pin">
       <a name="facing" val="west"/>
@@ -1260,49 +1352,88 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="ALU_Res_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="4" loc="(360,530)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
+    <comp lib="6" loc="(256,838)" name="Text">
+      <a name="text" val="regdesr should be here but we have it immediately written to write reg"/>
     </comp>
-    <comp lib="0" loc="(150,660)" name="Pin">
-      <a name="label" val="CLK"/>
+    <comp lib="0" loc="(210,670)" name="Pin">
+      <a name="width" val="3"/>
+      <a name="label" val="Wr_reg"/>
     </comp>
-    <comp lib="4" loc="(360,220)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,470)" name="Pin">
-      <a name="label" val="sin"/>
-    </comp>
-    <comp lib="4" loc="(360,600)" name="Register">
-      <a name="width" val="16"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,410)" name="Pin">
+    <comp lib="0" loc="(430,470)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="HALF_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="4" loc="(360,410)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(200,280)" name="Pin">
-      <a name="label" val="MemToReg"/>
-    </comp>
-    <comp lib="0" loc="(430,220)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="reg_WR_out"/>
+      <a name="label" val="SIN_out"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(360,280)" name="Register">
       <a name="width" val="1"/>
       <a name="trigger" val="falling"/>
     </comp>
-    <comp lib="6" loc="(256,768)" name="Text">
-      <a name="text" val="regdesr should be here but we have it immediately written to write reg"/>
+    <comp lib="0" loc="(260,530)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="ALU_Res_in"/>
+    </comp>
+    <comp lib="0" loc="(150,730)" name="Pin">
+      <a name="label" val="CLK"/>
+    </comp>
+    <comp lib="0" loc="(260,600)" name="Pin">
+      <a name="width" val="16"/>
+      <a name="label" val="loadRes_in"/>
+    </comp>
+    <comp lib="0" loc="(200,280)" name="Pin">
+      <a name="label" val="MemToReg"/>
+    </comp>
+    <comp lib="0" loc="(140,780)" name="Constant"/>
+    <comp lib="0" loc="(430,410)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="HALF_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(430,280)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="MemToReg_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,220)" name="Pin">
+      <a name="label" val="reg_WR"/>
+    </comp>
+    <comp lib="4" loc="(360,340)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,530)" name="Register">
+      <a name="width" val="16"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,220)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(430,340)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="label" val="LH_LB_out"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(200,410)" name="Pin">
+      <a name="label" val="half"/>
+    </comp>
+    <comp lib="4" loc="(360,670)" name="Register">
+      <a name="width" val="3"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,410)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="4" loc="(360,470)" name="Register">
+      <a name="width" val="1"/>
+      <a name="trigger" val="falling"/>
+    </comp>
+    <comp lib="0" loc="(200,470)" name="Pin">
+      <a name="label" val="sin"/>
     </comp>
     <comp lib="0" loc="(430,600)" name="Pin">
       <a name="facing" val="west"/>
@@ -1311,42 +1442,10 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
       <a name="label" val="loadRes_out"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(430,470)" name="Pin">
+    <comp lib="0" loc="(430,220)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
-      <a name="label" val="SIN_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(200,410)" name="Pin">
-      <a name="label" val="half"/>
-    </comp>
-    <comp lib="0" loc="(200,600)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="loadRes_in"/>
-    </comp>
-    <comp lib="4" loc="(360,470)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(430,280)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="MemToReg_out"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(260,530)" name="Pin">
-      <a name="width" val="16"/>
-      <a name="label" val="ALU_Res_in"/>
-    </comp>
-    <comp lib="4" loc="(360,340)" name="Register">
-      <a name="width" val="1"/>
-      <a name="trigger" val="falling"/>
-    </comp>
-    <comp lib="0" loc="(140,710)" name="Constant"/>
-    <comp lib="0" loc="(430,340)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="label" val="LH_LB_out"/>
+      <a name="label" val="reg_WR_out"/>
       <a name="labelloc" val="east"/>
     </comp>
   </circuit>
